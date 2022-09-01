@@ -4,6 +4,7 @@ const heroes = [
     type: 'Warrior',
     damage: 5,
     health: 100,
+    maxHealth: 100,
     level: 1,
     gold: 0,
     picture: 'https://orna.guide/static/orna/img/packs/nothren/2_m.png',
@@ -13,6 +14,7 @@ const heroes = [
     type: 'Mage',
     damage: 40,
     health: 50,
+    maxHealth: 50,
     level: 3,
     gold: 0,
     picture: 'https://orna.guide/static/orna/img/packs/avalon/mage_m.png',
@@ -22,6 +24,7 @@ const heroes = [
     type: 'Thief',
     damage: 30,
     health: 75,
+    maxHealth: 75,
     level: 5,
     steal: 10,
     gold: 0,
@@ -34,6 +37,7 @@ const boss = {
   damage: 5,
   level: 1,
 };
+let bossDamage = boss.damage
 
 // ElementId's
 let heroTable = document.getElementById('hero-table');
@@ -55,31 +59,15 @@ let bossAttackInterval = 0;
 function warriorAttack() {
   boss.health -= warrior.damage;
   bossHP.innerText = boss.health;
-
-  bossLevelUp();
-  
- 
- 
 }
 function mageAttack() {
   boss.health -= mage.damage;
   bossHP.innerText = boss.health;
-
-  bossLevelUp();
-  
- 
- 
 }
 function thiefAttack() {
   boss.health -= thief.damage;
   bossHP.innerText = boss.health;
-
-  bossLevelUp();
-  
- 
- 
 }
-
 
 function attack(type) {
   switch (type) {
@@ -92,33 +80,22 @@ function attack(type) {
     case 'Thief':
       thiefAttack();
       break;
-
   }
   drawBoss()
+  bossLevelUp()
 }
 
-// let bossTimeOut = 0;
+
 function bossAttack() {
-  // interval= setTimeout(bossAttack, 3000);
-  // let rNum = Math.floor(Math.random() * currentParty.length);
-  // currentParty[rNum].health -= boss.damage
-// clearTimeout(bossTimeOut)
-// if (interval != null) {
-//   clearInterval(interval);
-// }
-
-  // bossAttackInterval = setInterval(bossAttack, 3000);
-
-  // setInterval(bossAttack, 2000)
- 
+  let rNum = Math.floor(Math.random() * currentParty.length);
+  currentParty[rNum].health -= bossDamage
+  setInterval(bossAttack, 5000)
   drawParty();
-  // bossAttack()
 }
 // #endregion END-ATTACKS
 
-// #region DRAWING TO APGE
+// #region DRAWING TO PAGE
 function drawParty() {
-
   let template = '';
   currentParty.forEach((hero) => {
     template += `
@@ -162,15 +139,15 @@ function drawParty() {
 }
 
 
-function recruitMage(){
+function recruitMage() {
 
-currentParty.push(mage)
-drawParty()
+  currentParty.push(mage)
+  drawParty()
 }
-function recruitThief(){
+function recruitThief() {
 
-currentParty.push(thief)
-drawParty()
+  currentParty.push(thief)
+  drawParty()
 }
 
 
@@ -180,7 +157,11 @@ function drawBoss() {
 }
 // #end region
 
-function heroesLevelUp() {}
+function heroesLevelUp() {
+  currentParty.forEach(hero => {
+
+  })
+}
 
 function bossLevelUp() {
   if (boss.health <= 0) {
