@@ -60,7 +60,7 @@
   <body class="debug">
     <!-- HEADER AND SHOPPING LIST -->
     <header>
-      <nav class="navbar navbar-light shopitems p-2 align-items-center">
+      <nav class=" navbar navbar-light   p-2 align-items-center">
         <p>
           <button
             class="btn btn-primary mt-2 mx-1"
@@ -73,30 +73,29 @@
             SHOP
           </button>
         </p>
-        <div class="collapse" id="collapseExample">
-          <div class="card card-body">
-            <ul class="mx-1">
-              <li>
-                BUY POTION <i class="bi bi-heart-fill text-danger"></i
-                ><i
-                  class="mdi mdi-bottle-tonic-plus-outline text-success fs-3"
-                ></i
-                ><i class="bi bi-heart-fill text-danger"></i> 20
-                <i class="bi bi-coin text-warning"></i>
-              </li>
-              <li id="recruit-mage" onclick="recruitMage()">
-                RECRUIT MAGE
+        <div class="collapse shopitems" id="collapseExample">
+          <div class="card card-body shopitems ">
+
+            <div class="btn btn-light text-center">BUY POTION <i class="bi bi-heart-fill text-danger "></i
+              ><i
+                class="mdi mdi-bottle-tonic-plus-outline text-success fs-3"
+              ></i
+              ><i class="bi bi-heart-fill text-danger"></i> 20
+              <i class="bi bi-coin text-warning"></i></div>
+            <div class="btn btn-light text-center" id="recruit-mage" onclick="recruitMage()">
+              RECRUIT MAGE
                 
-                <i class="mdi mdi-magic-staff text-danger fs-3"></i> 100
-                
-                
-                <i class="bi bi-coin text-warning"></i>
-              </li>
-              <li onclick="recruitThief()">
-                RECRUIT THIEF
-                <i class="mdi mdi-knife-military text-dark fs-3"></i> 500
-                <i class="bi bi-coin text-warning"></i>
-              </li>
+              <i class="mdi mdi-magic-staff text-danger fs-3"></i> 100
+              
+              
+              <i class="bi bi-coin text-warning"></i>
+            </div>
+            <div class="btn btn-light text-center" onclick="recruitThief()">
+              RECRUIT THIEF
+              <i class="mdi mdi-knife-military text-dark fs-3"></i> 500
+              <i class="bi bi-coin text-warning"></i>
+            </div>
+            
             </ul>
           </div>
         </div>
@@ -108,15 +107,16 @@
       <div class="row">
         <div class="col-md-12 d-flex justify-content-center pt-3">
           <!-- -->
-          <div class="card" style="width: 25rem">
+          <div class="card" style="width: 15rem">
             <img
               id="boss"
               src=" https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.istockphoto.com%2Fillustrations%2Fthe-boss-fight-with-lava-demon-illustration-id1062560102%3Fk%3D6%26m%3D1062560102%26s%3D170667a%26w%3D0%26h%3DxWaUqr22mqzA6U-uDm0fdha_-U9bPrzL__ymsuCR2SA%3D&f=1&nofb=1"
               alt="boss"
+              class="rounded"
             />
-            <div class="card-body">
+            <div class="card-body" style="width: 15rem;height:10rem">
               <div>
-                <h5 class="card-title text-center">Boss Name?</h5>
+                <p class=" text-center">IGNIL THE FIRE TAMER IDK</p>
               </div>
               <div id="bossStats" class="text-center">
                 Health:

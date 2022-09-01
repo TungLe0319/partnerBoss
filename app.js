@@ -98,7 +98,7 @@ function drawParty() {
   let template = '';
   currentParty.forEach((hero) => {
     template += `
-  <div class="card mx-3 col-md-3" style="width: 10rem">
+  <div class="card mx-3 col-md-3" style="width:10rem">
   <img
     id="boss"
     src=" ${hero.picture}"
