@@ -122,12 +122,12 @@ function drawParty() {
   let template = '';
   currentParty.forEach((hero) => {
     template += `
-  <div class="card mx-3 col-md-3" style="width: 10rem">
+  <div class="card mx-3 " style="width: 10rem">
   <img
     id="boss"
     src=" ${hero.picture}"
     alt="boss"
-    class="img-fluid p-2"
+    class="p-2"
   />
   <div class="card-body">
     <div>
@@ -136,7 +136,7 @@ function drawParty() {
     <div  class="text-center">
       <div>
         Health:
-        <span id="hero-health" class="fs-4 text-danger">${hero.health}</span>
+        <span id="hero-health " class="fs-4 text-danger"><i class="mdi mdi-heart heart"></i>${hero.health}</span>
       </div>
       <div class="text-center">
         Gold: $<span id="hero-gold" class="fs-4 text-warning"
