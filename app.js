@@ -89,7 +89,6 @@ function attack(type) {
 function bossAttack() {
   let rNum = Math.floor(Math.random() * currentParty.length);
   currentParty[rNum].health -= bossDamage
-  setInterval(bossAttack, 5000)
   drawParty();
 }
 // #endregion END-ATTACKS
@@ -180,4 +179,4 @@ function bossLevelUp() {
 }
 drawBoss();
 drawParty();
-bossAttack();
+setInterval(bossAttack, 5000)
