@@ -98,14 +98,14 @@ function drawParty() {
   let template = '';
   currentParty.forEach((hero) => {
     template += `
-  <div class="card mx-3 col-md-3" style="width:10rem">
+  <div class=" mx-3 " style="width:10rem">
   <img
     id="boss"
     src=" ${hero.picture}"
     alt="boss"
-    class="img-fluid p-2"
+    class="img-fluid pb-2 "
   />
-  <div class="card-body">
+  <div class="card-body bg-light rounded ">
     <div>
       <h5 class="card-title text-center">${hero.name}</h5>
     </div>

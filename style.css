@@ -11,9 +11,10 @@ nav {
   background-position: center;
 }
 ß
-.shopitems{
-  user-select: none;
-  cursor: pointer;
+.shop-items:hover{
+  
+  background-color: darkorange!important;
+ color: darkorange;
 }
 
 .heroCard{
