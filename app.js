@@ -55,6 +55,13 @@ let interval = null
 let bossAttackInterval = 0;
 // --------------
 
+let goldTotal = 0
+
+function getGold() {
+  currentParty.forEach(hero => {
+    goldTotal += hero.gold
+  })
+}
 // #region ATTACKS
 function warriorAttack() {
   boss.health -= warrior.damage;
@@ -67,6 +74,7 @@ function mageAttack() {
 function thiefAttack() {
   boss.health -= thief.damage;
   bossHP.innerText = boss.health;
+  thief.gold += thief.steal
 }
 
 function attack(type) {
@@ -154,11 +162,14 @@ function drawBoss() {
   bossHP.innerText = boss.health;
   bossLVL.innerText = boss.level;
 }
-// #end region
+// #endregion
 
 function heroesLevelUp() {
   currentParty.forEach(hero => {
-
+    hero.damage += 10
+    hero.maxHealth += 20
+    hero.level++
+    hero.health += hero.maxHealth - hero.health
   })
 }
 
@@ -170,13 +181,66 @@ function bossLevelUp() {
     boss.damage += 10; //random eventually
     boss.health += boss.maxHealth;
     currentParty.forEach((hero) => {
-      hero.gold += 10; //random eventually//
+      hero.gold += 50; //random eventually//
       // console.log(hero.gold);
     });
+    heroesLevelUp()
   }
   drawBoss();
   drawParty();
 }
+
+function divideGold() {
+  getGold()
+  let splitGold = 0
+  currentParty.forEach(hero => {
+    splitGold = Math.floor(goldTotal / 3)
+    hero.gold = 0
+    hero.gold += splitGold
+    goldTotal = 0
+  })
+}
+
+function buyMage() {
+  getGold()
+  if (goldTotal >= 100) {
+    goldTotal -= 100
+    recruitMage()
+    divideGold()
+  } else {
+    alert('Not enough gold.')
+  }
+}
+
+function buyThief() {
+  getGold()
+  if (goldTotal >= 500) {
+    goldTotal -= 500
+    recruitThief()
+    divideGold()
+  } else {
+    alert('Not enough gold.')
+  }
+}
+
+function buyPotion() {
+  getGold()
+  if (goldTotal >= 20) {
+    goldTotal -= 20
+    healParty()
+    divideGold()
+  } else {
+    alert('Not enough gold.')
+  }
+}
+
+function healParty() {
+  warrior.health += warrior.maxHealth / 5
+  thief.health += thief.maxHealth / 5
+  mage.health += mage.maxHealth / 5
+  drawParty()
+}
+
 setInterval(bossAttack, 5000)
 drawBoss();
 drawParty();
