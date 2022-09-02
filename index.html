@@ -1,9 +1,7 @@
 <!-- Updated HTML WITH BOOTSTRAP/MDI/FONT-AWESOME/GOOGLE-FONTS/DEBUG/SCRIPTS -->
 <html lang="en">
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<head>
+<<<<<<< HEAD <<<<<<< HEAD <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
@@ -25,128 +23,59 @@
     rel="stylesheet" />
   <!-- NOTE style.css -->
   <link rel="stylesheet" href="style.css" />
-</head>
-<!-- SECTION STYLES -->
-<style>
-  body.debug .container,
-  body.debug .container-fluid {
-    outline: 2px double blue;
-    outline-offset: -2px;
-  }
+  </head>
+  <!-- SECTION STYLES -->
+  <style>
+    body.debug .container,
+    body.debug .container-fluid {
+      outline: 2px double blue;
+      outline-offset: -2px;
+    }
 
-  body.debug .row {
-    outline: 2px dashed red;
-    outline-offset: -2px;
-  }
+    body.debug .row {
+      outline: 2px dashed red;
+      outline-offset: -2px;
+    }
 
-  body.debug [class*='col-'] {
-    outline: 2px dotted forestgreen;
-    outline-offset: -3px;
-  }
-</style>
-<!-- !SECTION -->
+    body.debug [class*='col-'] {
+      outline: 2px dotted forestgreen;
+      outline-offset: -3px;
+    }
+  </style>
+  <!-- !SECTION -->
 
-<body class="debug">
-  <!-- HEADER AND SHOPPING LIST -->
-  <header>
-    <nav class="navbar navbar-light shopitems p-2 align-items-center">
-      <p>
-        <button class="btn btn-primary mt-2 mx-1" type="button" data-bs-toggle="collapse"
-          data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-          SHOP
-        </button>
-      </p>
-      <div class="collapse" id="collapseExample">
-        <div class="card card-body">
-          <ul class="mx-1">
-            <li onclick="buyPotion()">
-              BUY POTION <i class="bi bi-heart-fill text-danger"></i><i
-                class="mdi mdi-bottle-tonic-plus-outline text-success fs-3"></i><i
-                class="bi bi-heart-fill text-danger"></i> 20
-              <i class="bi bi-coin text-warning"></i>
-            </li>
-            <li id="recruit-mage" onclick="buyMage()">
-              RECRUIT MAGE
-
-              <i class="mdi mdi-magic-staff text-danger fs-3"></i> 100
-
-
-              <i class="bi bi-coin text-warning"></i>
-            </li>
-            <li onclick="buyThief()">
-              RECRUIT THIEF
-              <i class="mdi mdi-knife-military text-dark fs-3"></i> 500
-              <i class="bi bi-coin text-warning"></i>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <!-- BOSS -->
-    <section class="container-fluid"></section>
-    <div class="row">
-      <div class="col-md-12 d-flex justify-content-center pt-3">
-        <!-- -->
-        <div class="card" style="width: 25rem">
-          <img id="boss"
-            src=" https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.istockphoto.com%2Fillustrations%2Fthe-boss-fight-with-lava-demon-illustration-id1062560102%3Fk%3D6%26m%3D1062560102%26s%3D170667a%26w%3D0%26h%3DxWaUqr22mqzA6U-uDm0fdha_-U9bPrzL__ymsuCR2SA%3D&f=1&nofb=1"
-            alt="boss" />
-          <div class="card-body">
-            <div>
-              <h5 class="card-title text-center">Boss Name?</h5>
-            </div>
-            <div id="bossStats" class="text-center">
-              Health:
-              <span id="boss-health" class="fs-4 text-danger"></span>
-            </div>
-            <div>
-              <div class="text-center">
-                Lvl: <span id="boss-level" class="fs-4 text-success"></span>
-=======
   <body class="debug">
-=======
-  <body class="">
->>>>>>> 4b03e01bd169f85dc75b4da6ed68bf3f8b415840
     <!-- HEADER AND SHOPPING LIST -->
     <header>
-      <nav class=" navbar navbar-light   p-2 align-items-center">
+      <nav class="navbar navbar-light shopitems p-2 align-items-center">
         <p>
-          <button
-            class="btn btn-primary mt-2 mx-1"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapseExample"
-            aria-expanded="false"
-            aria-controls="collapseExample"
-          >
+          <button class="btn btn-primary mt-2 mx-1" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
             SHOP
           </button>
         </p>
-        <div class="collapse shopitems" id="collapseExample">
-          <div class="card card-body shopitems ">
+        <div class="collapse" id="collapseExample">
+          <div class="card card-body">
+            <ul class="mx-1">
+              <li onclick="buyPotion()">
+                BUY POTION <i class="bi bi-heart-fill text-danger"></i><i
+                  class="mdi mdi-bottle-tonic-plus-outline text-success fs-3"></i><i
+                  class="bi bi-heart-fill text-danger"></i> 20
+                <i class="bi bi-coin text-warning"></i>
+              </li>
+              <li id="recruit-mage" onclick="buyMage()">
+                RECRUIT MAGE
 
-            <div class="btn btn-light text-center">BUY POTION <i class="bi bi-heart-fill text-danger "></i
-              ><i
-                class="mdi mdi-bottle-tonic-plus-outline text-success fs-3"
-              ></i
-              ><i class="bi bi-heart-fill text-danger"></i> 20
-              <i class="bi bi-coin text-warning"></i></div>
-            <div class="btn btn-light text-center shop-items" id="recruit-mage" onclick="recruitMage()">
-              RECRUIT MAGE
-                
-              <i class="mdi mdi-magic-staff text-danger fs-3"></i> 100
-              
-              
-              <i class="bi bi-coin text-warning"></i>
-            </div>
-            <div class="btn btn-light text-center" onclick="recruitThief()">
-              RECRUIT THIEF
-              <i class="mdi mdi-knife-military text-dark fs-3"></i> 500
-              <i class="bi bi-coin text-warning"></i>
-            </div>
-            
+                <i class="mdi mdi-magic-staff text-danger fs-3"></i> 100
+
+
+                <i class="bi bi-coin text-warning"></i>
+              </li>
+              <li onclick="buyThief()">
+                RECRUIT THIEF
+                <i class="mdi mdi-knife-military text-dark fs-3"></i> 500
+                <i class="bi bi-coin text-warning"></i>
+              </li>
             </ul>
           </div>
         </div>
@@ -158,16 +87,13 @@
       <div class="row">
         <div class="col-md-12 d-flex justify-content-center pt-3">
           <!-- -->
-          <div class="card" style="width: 15rem">
-            <img
-              id="boss"
-              src=" https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.istockphoto.com%2Fillustrations%2Fthe-boss-fight-with-lava-demon-illustration-id1062560102%3Fk%3D6%26m%3D1062560102%26s%3D170667a%26w%3D0%26h%3DxWaUqr22mqzA6U-uDm0fdha_-U9bPrzL__ymsuCR2SA%3D&f=1&nofb=1"
-              alt="boss"
-              class="rounded"
-            />
-            <div class="card-body" style="width: 15rem;height:10rem">
+          <div class="card" style="width: 25rem">
+            <img id="boss"
+              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.istockphoto.com%2Fillustrations%2Fthe-boss-fight-with-lava-demon-illustration-id1062560102%3Fk%3D6%26m%3D1062560102%26s%3D170667a%26w%3D0%26h%3DxWaUqr22mqzA6U-uDm0fdha_-U9bPrzL__ymsuCR2SA%3D&f=1&nofb=1"
+              alt="boss" />
+            <div class="card-body">
               <div>
-                <p class=" text-center">IGNIL THE FIRE TAMER IDK</p>
+                <h5 class="card-title text-center">Boss Name?</h5>
               </div>
               <div id="bossStats" class="text-center">
                 Health:
@@ -176,98 +102,158 @@
               <div>
                 <div class="text-center">
                   Lvl: <span id="boss-level" class="fs-4 text-success"></span>
+                  =======
+
+                  <body class="debug">
+                    =======
+
+                    <body class="">
+                      >>>>>>> 4b03e01bd169f85dc75b4da6ed68bf3f8b415840
+                      <!-- HEADER AND SHOPPING LIST -->
+                      <header>
+                        <nav class=" navbar navbar-light   p-2 align-items-center">
+                          <p>
+                            <button class="btn btn-primary mt-2 mx-1" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                              SHOP
+                            </button>
+                          </p>
+                          <div class="collapse shopitems" id="collapseExample">
+                            <div class="card card-body shopitems ">
+
+                              <div class="btn btn-light text-center">BUY POTION <i
+                                  class="bi bi-heart-fill text-danger "></i><i
+                                  class="mdi mdi-bottle-tonic-plus-outline text-success fs-3"></i><i
+                                  class="bi bi-heart-fill text-danger"></i> 20
+                                <i class="bi bi-coin text-warning"></i>
+                              </div>
+                              <div class="btn btn-light text-center shop-items" id="recruit-mage"
+                                onclick="recruitMage()">
+                                RECRUIT MAGE
+
+                                <i class="mdi mdi-magic-staff text-danger fs-3"></i> 100
+
+
+                                <i class="bi bi-coin text-warning"></i>
+                              </div>
+                              <div class="btn btn-light text-center" onclick="recruitThief()">
+                                RECRUIT THIEF
+                                <i class="mdi mdi-knife-military text-dark fs-3"></i> 500
+                                <i class="bi bi-coin text-warning"></i>
+                              </div>
+
+                              </ul>
+                            </div>
+                          </div>
+                        </nav>
+                      </header>
+                      <main>
+                        <!-- BOSS -->
+                        <section class="container-fluid"></section>
+                        <div class="row">
+                          <div class="col-md-12 d-flex justify-content-center pt-3">
+                            <!-- -->
+                            <div class="card" style="width: 15rem">
+                              <img id="boss"
+                                src=" https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.istockphoto.com%2Fillustrations%2Fthe-boss-fight-with-lava-demon-illustration-id1062560102%3Fk%3D6%26m%3D1062560102%26s%3D170667a%26w%3D0%26h%3DxWaUqr22mqzA6U-uDm0fdha_-U9bPrzL__ymsuCR2SA%3D&f=1&nofb=1"
+                                alt="boss" class="rounded" />
+                              <div class="card-body" style="width: 15rem;height:10rem">
+                                <div>
+                                  <p class=" text-center">IGNIL THE FIRE TAMER IDK</p>
+                                </div>
+                                <div id="bossStats" class="text-center">
+                                  Health:
+                                  <span id="boss-health" class="fs-4 text-danger"></span>
+                                </div>
+                                <div>
+                                  <div class="text-center">
+                                    Lvl: <span id="boss-level" class="fs-4 text-success"></span>
+                                  </div>
+                                  >>>>>>> 85e6f524cd8f6aee4c61dc9ff72df350cdac6d0b
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                 </div>
->>>>>>> 85e6f524cd8f6aee4c61dc9ff72df350cdac6d0b
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- ------ -->
-    <!-- HEROS -->
+                <!-- ------ -->
+                <!-- HEROS -->
 
-<<<<<<< HEAD
+                <<<<<<< HEAD <section class="container-fluid">
+                  </section>
+                  <div class="row">
+                    <!-- Hero 1 -->
+                    <div class="col-md-3 d-flex justify-content-center px-3 pt-1 pb-1">
+                      <div class="container">
+                        <div id="hero-table" class="d-flex flex-row "></div>
 
-    <section class="container-fluid"></section>
-    <div class="row">
-      <!-- Hero 1 -->
-      <div class="col-md-3 d-flex justify-content-center px-3 pt-1 pb-1">
-        <div class="container">
-          <div id="hero-table" class="d-flex flex-row "></div>
-
-        </div>
+                      </div>
 
 
-      </div>
-      <!-- -------------- -->
-      <!-- Hero 2 -->
+                    </div>
+                    <!-- -------------- -->
+                    <!-- Hero 2 -->
 
-      <!-- ----- -->
-      <!-- Hero 3 -->
+                    <!-- ----- -->
+                    <!-- Hero 3 -->
 
-      <!-- ------ -->
-    </div>
+                    <!-- ------ -->
+                  </div>
 
-    <img id="hero-2" src="" alt="Hero-2" />
-    <img id="hero-3" src="" alt="Hero-3" />
+                  <img id="hero-2" src="" alt="Hero-2" />
+                  <img id="hero-3" src="" alt="Hero-3" />
 
-    <!-- ITEM MENU/RESET -->
-    <section class="container-fluid"></section>
-    <div class="row">
-      <div class="col-md-8 bg-dark text-light">
-        <div class="container"></div>
-      </div>
-    </div>
-  </main>
-
-  <!-- SECTION SCRIPTS -->
-  <script src="https://kit.fontawesome.com/a2d3ad0e84.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"
-    defer></script>
-  <script src="app.js"></script>
-  <!-- !SECTION -->
-</body>
-
-</html>
-=======
-      
-      <section class="container-fluid">
-
-        <div class="row">
-          <!-- Hero 1 -->
-          <div class="col-md-12 d-flex justify-content-center px-3 pt-1 pb-1">
-        
-              <div class="row ">
-  
-                <div id="hero-table" class="col-12 px-1 pb-3 d-flex justify-content-center"></div>
-              </div>
-  
-          
-  
-          
-          </div>
-          
-        </div>
-      </section>
-
-     
+                  <!-- ITEM MENU/RESET -->
+                  <section class="container-fluid"></section>
+                  <div class="row">
+                    <div class="col-md-8 bg-dark text-light">
+                      <div class="container"></div>
+                    </div>
+                  </div>
     </main>
 
     <!-- SECTION SCRIPTS -->
-    <script
-      src="https://kit.fontawesome.com/a2d3ad0e84.js"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-      crossorigin="anonymous"
-      defer
-    ></script>
+    <script src="https://kit.fontawesome.com/a2d3ad0e84.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"
+      defer></script>
     <script src="app.js"></script>
     <!-- !SECTION -->
   </body>
+
+</html>
+=======
+
+<section class="container-fluid">
+
+  <div class="row">
+    <!-- Hero 1 -->
+    <div class="col-md-12 d-flex justify-content-center px-3 pt-1 pb-1">
+
+      <div class="row ">
+
+        <div id="hero-table" class="col-12 px-1 pb-3 d-flex justify-content-center"></div>
+      </div>
+
+
+
+
+    </div>
+
+  </div>
+</section>
+
+
+</main>
+
+<!-- SECTION SCRIPTS -->
+<script src="https://kit.fontawesome.com/a2d3ad0e84.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"
+  defer></script>
+<script src="app.js"></script>
+<!-- !SECTION -->
+</body>
+
 </html>
 >>>>>>> 85e6f524cd8f6aee4c61dc9ff72df350cdac6d0b
