@@ -106,14 +106,14 @@ function drawParty() {
   let template = '';
   currentParty.forEach((hero) => {
     template += `
-  <div class="card mx-3 col-md-3" style="width: 10rem">
+  <div class=" mx-3 " style="width:10rem">
   <img
     id="boss"
     src=" ${hero.picture}"
     alt="boss"
-    class="img-fluid p-2"
+    class="img-fluid pb-2 "
   />
-  <div class="card-body">
+  <div class="card-body bg-light rounded ">
     <div>
       <h5 class="card-title text-center">${hero.name}</h5>
     </div>
@@ -192,17 +192,14 @@ function bossLevelUp() {
 
 function divideGold() {
   getGold()
-  let splitGold = 0
+  let splitGold = Math.floor(goldTotal / currentParty.length)
   currentParty.forEach(hero => {
-    splitGold = Math.floor(goldTotal / 3)
-    hero.gold = 0
-    hero.gold += splitGold
-    goldTotal = 0
+    hero.gold = splitGold
   })
 }
 
 function buyMage() {
-  getGold()
+  divideGold()
   if (goldTotal >= 100) {
     goldTotal -= 100
     recruitMage()
@@ -213,7 +210,7 @@ function buyMage() {
 }
 
 function buyThief() {
-  getGold()
+  divideGold()
   if (goldTotal >= 500) {
     goldTotal -= 500
     recruitThief()
@@ -224,7 +221,7 @@ function buyThief() {
 }
 
 function buyPotion() {
-  getGold()
+  divideGold()
   if (goldTotal >= 20) {
     goldTotal -= 20
     healParty()
